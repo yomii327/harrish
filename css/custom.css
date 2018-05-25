@@ -1,0 +1,516 @@
+html {
+  overflow-x: hidden;
+  display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.row { margin: 0!important; }
+
+.collapse, .collapse.show {
+  transition: .5s all ease-in-out!important;
+}
+
+visible-mobile {
+  display: none;
+}
+@media(max-width:768px) {
+  .navigation #nav ul li {
+      padding: 5px 0!important;
+  }
+}
+
+body,
+.pmsMain {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff!important;
+  font-family: "Open Sans";
+  height: 100%!important;
+  display: table;
+  width: 100%;
+}
+
+.pmsMain { padding-bottom: 80px; }
+
+.no-padding { padding: 0!important; }
+.no-margin { margin: 0!important; }
+
+#top { height: auto!important; }
+
+header {
+  background: #fff!important;
+  height: auto!important;
+  padding: 8px 0;
+  border-top: none!important;
+}
+
+header .logo { margin: 0!important; }
+
+header .welcome {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  width: 100%!important;
+}
+
+header .header-icon {
+  -webkit-align-items: center;
+  align-items: center;
+  border: 1px solid #c9ccd1;
+  border-radius: 100%;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-flex;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 38px;
+  min-height: 38px;
+  min-width: 38px;
+  width: 38px;
+  margin-right: 10px;
+}
+
+header .header-icon i { color: #FC9117; }
+
+header .header-text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+header .header-text .highlight { color: #FC9117; }
+header .logout { margin-left: 50px; }
+
+header .logout button,
+#middle button,
+.visible-mobile button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  border: none;
+  color: #fff;
+  background: #FC9117;
+  box-shadow: 0 2px 2px 0 rgba(255,152,0,.14), 0 3px 1px -2px rgba(255,152,0,.2), 0 1px 5px 0 rgba(255,152,0,.12);
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 12px 20px;
+}
+
+header .logout button:hover,
+#middle button:hover {
+  cursor: pointer;
+}
+
+#middle button i { margin-right: 5px; }
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background: transparent!important;}
+.navigation {
+  position: relative;
+  display: block;
+  height: auto!important;
+  background: #1c293c!important;
+  padding: .5rem 1rem;
+}
+
+.navigation #nav {
+  width: 100%!important;
+  margin-top: 0!important;
+  padding: 0!important;
+}
+
+/* .navigation #nav,
+.navigation #nav ul li,
+.navigation #nav ul li a {
+  height: auto!important;
+} */
+
+.navigation #nav ul li a {
+  border-left: none!important;
+  height: auto;
+}
+
+.navigation #nav ul li {
+  padding: 15px 0;
+  border-left: 1px solid #2b3e5a!important;
+  height: auto;
+}
+
+.navigation #nav ul li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff!important;
+  padding: 10px 12px!important;
+  text-transform: uppercase;
+}
+
+.navigation #nav ul li a:hover { height: auto!important; }
+
+.navigation .active, .navigation #nav ul li a:hover, .navigation #nav ul li:hover { background-color: #1c293c!important; }
+.navigation #nav ul li.active a, .navigation #nav ul li a:hover { color: #FC9117!important; }
+
+#middle {
+  position: relative;
+  background: #fff!important;
+  background-image: none!important;
+}
+
+#middle .title h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.orange-text { color: #FC9117!important;}
+
+#bottom {
+  background-image: none!important;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1c293c;
+  color: #fff!important;
+  text-align: center;
+  float: none!important;
+  height: auto!important;
+}
+
+#bottom footer {
+  position: relative;
+  height: auto!important;
+  width: 100%!important;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.footerTop {
+  background: #FC9117!important;
+  border: none!important;
+  font-size: 24px;
+  padding: 8px 14px 7px!important;
+  text-shadow: none!important;
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+  margin: 0!important;
+  color: #fff!important;
+}
+
+#top button.navbar-toggler.navbar-toggler-right {
+  position: relative!important;
+  border-color: #fff!important;
+}
+#top button.navbar-toggler.navbar-toggler-right i { color: #fff!important; }
+
+/*login page*/
+#login { padding: 35px 0; }
+#login #sign_in_response { width: 100%!important; }
+#login .signin_form {
+  width: 100%!important;
+  margin-top: 10px!important;
+}
+#login label h6 { font-size: 16px; }
+#login .remember { margin: 15px 0; }
+#login button {
+  margin-top: 10px;
+  width: 150px;
+}
+/* Quality Check Page */
+main#quality-check { padding: 50px 0!important; }
+main#quality-check .content { padding: 35px 0; }
+main#quality-check label {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  color: #333;
+  font-size: 14px;
+}
+main#quality-check .btn.btn-default {
+  margin-top: 15px!important;
+  width: 180px!important;
+}
+
+/*health check*/
+main#health-check { padding: 35px 0!important; }
+main#health-check .first_box {
+  width: 100%!important;
+  border-radius: 3px!important;
+  padding: 10px!important;
+}
+
+main#health-check .big_container { margin-bottom: 35px; }
+
+main#health-check .first_box .title {
+  display: inline-block;
+  width: 100%;
+}
+main#health-check .first_box .title .text,
+main#health-check .first_box .title .expand {
+  display: inline-block;
+}
+
+main#health-check .first_box .title .expand {
+  float: right;
+  margin-right: 15px;
+  margin-top: 8px;
+}
+
+main#health-check .first_box .title .text { float: left;}
+
+main#health-check .first_box .title h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+main#health-check .first_box .title h1 img { margin-right: 7px; }
+main#health-check .first_box table td {  border-color: transparent; }
+
+/* messages */
+#messages .MailLeft, #messages .MailRight {
+  width: 100%!important;
+  height: 100%;
+}
+
+#messages .GlobalContainer { background: #fff!important; }
+
+#messages .MailLeft {
+  background: #fff!important;
+  -webkit-box-shadow: 2px 0px 46px -21px rgba(107,107,107,1);
+  -moz-box-shadow: 2px 0px 46px -21px rgba(107,107,107,1);
+  box-shadow: 2px 0px 46px -21px rgba(107,107,107,1);
+  padding: 25px;
+}
+
+#messages .MailLeft li#inboxLi > a,
+#messages .subFolder,
+#messages .plusIcon,
+#messages .MailLeft li#draftLi > a,
+#messages .MailLeft li#trashLi > a,
+#messages .minusIcon,
+#messages .MailLeft li.subFolderLi a {
+  background: none!important;
+}
+
+#messages .MailLeft li#inboxLi > a:before {
+  content: "\f0e0";
+  font-family: Font Awesome\ 5 Free!important;
+  display: inline-block;
+  margin-left: -25px;
+  margin-right: 10px;
+  color: #FC9117;
+  font-size: 15px;
+}
+
+#messages .MailLeft li#draftLi > a:before {
+  content: "\f2b6";
+  font-family: Font Awesome\ 5 Free!important;
+  display: inline-block;
+  margin-left: -25px;
+  margin-right: 10px;
+  color: #FC9117;
+  font-size: 15px;
+}
+
+#messages .MailLeft li#trashLi > a:before {
+  content: "\f2ed";
+  font-family: Font Awesome\ 5 Free!important;
+  display: inline-block;
+  margin-left: -25px;
+  margin-right: 10px;
+  color: #FC9117;
+  font-size: 15px;
+}
+
+#messages .MailLeft li.subFolderLi a:before {
+  content: "\f07b";
+  font-family: Font Awesome\ 5 Free!important;
+  display: inline-block;
+  margin-left: -25px;
+  margin-right: 10px;
+  color: #FC9117;
+  font-size: 15px;
+}
+
+#messages .subFolder:before {
+  content: "\f07c";
+  font-family: Font Awesome\ 5 Free!important;
+  display: inline-block;
+  color: #FC9117;
+  font-size: 15px;
+}
+
+#messages .plusIcon:before {
+  content: "\f0fe";
+  font-family: Font Awesome\ 5 Free!important;
+  display: inline-block;
+  color: #FC9117;
+  font-size: 15px;
+}
+
+#messages .minusIcon:before {
+  content: "\f146";
+  font-family: Font Awesome\ 5 Free!important;
+  display: inline-block;
+  color: #FC9117;
+  font-size: 15px;
+}
+
+#messages .MailLeft a:hover, #messages .MailLeft a:focus { text-decoration: none!important; }
+
+#messages .side-btn .btn.btn-default {
+  width: 180px;
+  margin-top: -12px;
+}
+#messages .MailRightHeader span { margin-top: 5px; }
+#messages .MailRight { padding: 25px 15px!important; }
+#messages .MailRightHeader {
+  height: auto!important;
+  margin-bottom: 25px;
+}
+
+#messages #projForm {
+  float: right;
+  width: 50%;
+}
+
+#messages .MailRightHeader .btn.btn-default { margin-top: -8px!important; }
+#messages .MailRight h3 {
+  margin: 7px 0 20px;
+  font-family: "Ubuntu";
+  font-weight: 400;
+}
+
+#messages  p.label {
+  width: 50px;
+  display: inline-block;
+}
+
+#messages .form-control.date {
+  width: calc(100% - 70px);
+  display: inline-block;
+}
+
+#messages .cleardate {
+  width: 10px;
+  display: inline-block;
+  float: right;
+  font-size: 24px;
+  color: red;
+  margin-left: 5px;
+}
+
+#profilepage { margin-top: 35px; }
+
+#inspection { padding: 25px 0 60px!important; }
+#inspection .input { margin-top: 15px!important; }
+
+/*big screens */
+@media screen and (min-width: 1200px) {
+  .visible-mobile {
+    display: none;
+  }
+}
+
+/*ipad landscape */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-mobile { display: none; }
+  .footerTop {
+    bottom: 48px;
+    right: 0;
+  }
+}
+
+/*ipad portrait */
+@media (min-width: 768px) and (max-width: 991px) {
+  header .logout { display: none; }
+  .visible-mobile {
+    display: inline-block;
+    float: right;
+  }
+
+  .visible-mobile button {
+    padding: 10px 15px!important;
+    margin-top: -3px;
+  }
+
+  .navigation { padding: 15px 0; }
+  #bottom footer { text-align: left; }
+
+  .footerTop {
+    bottom: 48px;
+    right: 0;
+  }
+}
+
+/* mobile */
+@media(max-width: 767px) {
+  iframe#chart1,
+  iframe#chart3_if,
+  iframe#chart4_nb{
+      width: 100% !important;
+  }
+  .visible-mobile {
+    display: inline-block;
+    float: right;
+  }
+
+  .visible-mobile button {
+    padding: 10px 15px!important;
+    margin-top: -3px;
+  }
+
+  html { display: block!important;}
+  header .logo {
+    float: none;
+  }
+  header .navbar-brand{ width: 100%;}
+  header .navbar-brand img {
+    margin: 0 auto;
+    display: block;
+  }
+  header .logout { display: none; }
+  header .welcome {
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  nav button.navbar-toggler.navbar-toggler-right { margin-left: 15px; }
+
+  #quality-check .search_multiple { padding-bottom: 50px!important; }
+  #supportSpan {
+    float: none!important;
+    text-align: center;
+  }
+
+  .navigation { padding: 15px;}
+  .footerTop {
+    bottom: 83px;
+    right: 0;
+    font-size: 18px;
+    position: fixed;
+  }
+}

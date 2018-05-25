@@ -1,0 +1,168 @@
+10
+
+dir
+0
+https://test/svn/wiseworkers/defectid/dompdf/lib/fonts
+https://test/svn/wiseworkers
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f7b918d0-c8a5-f849-9cba-0c1fa5b09937
+
+dompdf_font_family_cache
+file
+
+
+
+add
+
+Helvetica-Bold.afm
+file
+
+
+
+add
+
+dompdf_font_family_cache.dist
+file
+
+
+
+add
+
+Times-Italic.afm
+file
+
+
+
+add
+
+Times-BoldItalic.afm
+file
+
+
+
+add
+
+Courier-Bold.afm
+file
+
+
+
+add
+
+Times-Roman.afm
+file
+
+
+
+add
+
+php_Times-Italic.afm
+file
+
+
+
+add
+
+php_Times-BoldItalic.afm
+file
+
+
+
+add
+
+Times-Bold.afm
+file
+
+
+
+add
+
+Helvetica-Oblique.afm
+file
+
+
+
+add
+
+php_Times-Roman.afm
+file
+
+
+
+add
+
+Helvetica-BoldOblique.afm
+file
+
+
+
+add
+
+Helvetica.afm
+file
+
+
+
+add
+
+php_Times-Bold.afm
+file
+
+
+
+add
+
+Courier-Oblique.afm
+file
+
+
+
+add
+
+Courier-BoldOblique.afm
+file
+
+
+
+add
+
+Courier.afm
+file
+
+
+
+add
+
+php_Helvetica.afm
+file
+
+
+
+add
+
+ZapfDingbats.afm
+file
+
+
+
+add
+

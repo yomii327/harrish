@@ -1,0 +1,104 @@
+Location,Sublocation 1,Sublocation 2,Sublocation3,Task,Start Date (dd/mm/yyyy),End Date  (dd/mm/yyyy),Trade,Hold Points
+Level  1,Room 1,WALL FRAMING & PLASTERBOARD,Wall Framing,Windows,9/10/2014,12/10/2014,Alutech; Sealwell,Yes
+,,,,Setout ,9/10/2014,12/10/2014,,No
+,,,,Metal Stud,9/10/2014,12/10/2014,,No
+,,,,Service Rough-In,9/10/2014,12/10/2014,,No
+,,,,Showerbases,9/10/2014,12/10/2014,,Yes
+,,,,Plaster Walls / Frame Ceilings,9/10/2014,12/10/2014,,Yes
+,,,"1- SHEET FIRE/PARTY WALLS, 2 - FINISH FRAME INTERNAL WALLS & SHEET, 3 - FRAME CEILINGS",Fire Droppers,9/10/2014,12/10/2014,,Yes
+,,,,Plaster Ceilings,9/10/2014,12/10/2014,,Yes
+,,,,Paint 1st & 2nd Coat,9/10/2014,12/10/2014,,Yes
+,,,,Joinery / Stone Measure,9/10/2014,12/10/2014,,No
+,,,,Waterproofing,9/10/2014,12/10/2014,,No
+,,,,Tiling / Grouting,9/10/2014,12/10/2014,,No
+,,,"HANG CEILINGS/STOP, SAND WALLS & CEILINGS",Plumbing Fitoff,3/3/2014,30/11/2014,,No
+,,,,Showerscreens / Mirrors,3/3/2014,30/11/2014,,No
+,,,,Timber Floors,30/11/2014,30/11/2014,,No
+,,,,Carpentry Fix (doors / skirts / hardware),30/11/2014,30/11/2014,,No
+,,,,Stone,3/3/2014,30/11/2014,,No
+,,,,Paint 3rd Coat,3/3/2014,30/11/2014,,No
+,,,,Services Fitoff,30/11/2014,30/11/2014,,No
+,,,,Joinery Fitoff,30/11/2014,30/11/2014,,No
+,,,,Carpet,3/3/2014,30/11/2014,,No
+,,,,Cleaning,3/3/2014,30/11/2014,,No
+,,,PATCHING,Windows,30/11/2014,30/11/2014,Alutech; Sealwell,No
+,,,,Setout ,30/11/2014,30/11/2014,,No
+,,,,Metal Stud,3/3/2014,30/11/2014,,Yes
+,,FIRE SERVICES - WET,ROUGH-IN MAINS& BRANCHES STAGE ONE,Service Rough-In,3/3/2014,30/11/2014,,Yes
+,,,,Showerbases,30/11/2014,30/11/2014,,Yes
+,,,,Plaster Walls / Frame Ceilings,30/11/2014,30/11/2014,,Yes
+,,,,Fire Droppers,3/3/2014,30/11/2014,,Yes
+,,,,Plaster Ceilings,3/3/2014,30/11/2014,,No
+,,,ROUGH-IN MAINS& BRANCHES STAGE TWO,Paint 1st & 2nd Coat,30/11/2014,30/11/2014,,No
+,,,,Joinery / Stone Measure,30/11/2014,30/11/2014,,No
+,,,,Waterproofing,3/3/2014,30/11/2014,,No
+,,,,Tiling / Grouting,3/3/2014,30/11/2014,,No
+,,,FIT-OFF INSPECTION,Plumbing Fitoff,30/11/2014,30/11/2014,,No
+,,,,Showerscreens / Mirrors,30/11/2014,30/11/2014,,Yes
+,,,,Timber Floors,3/3/2014,30/11/2014,,Yes
+,,,,Carpentry Fix (doors / skirts / hardware),3/3/2014,30/11/2014,,Yes
+,,,,Stone,30/11/2014,30/11/2014,,Yes
+,,HYDRAULIC SERVICES ,ROUGH-IN INSPECTION,Paint 3rd Coat,30/11/2014,30/11/2014,,Yes
+,,,,Services Fitoff,3/3/2014,30/11/2014,,No
+,,,,Joinery Fitoff,3/3/2014,30/11/2014,,No
+,,,,Carpet,30/11/2014,30/11/2014,,No
+,,,,Cleaning,30/11/2014,30/11/2014,,No
+,,,,Windows,3/3/2014,30/11/2014,,No
+,,,,Setout ,3/3/2014,30/11/2014,,No
+,,,,Metal Stud,30/11/2014,30/11/2014,,No
+,,,,Service Rough-In,30/11/2014,30/11/2014,,No
+,,,,Showerbases,3/3/2014,30/11/2014,,No
+,,,,Plaster Walls / Frame Ceilings,3/3/2014,30/11/2014,,No
+,,,,Fire Droppers,30/11/2014,30/11/2014,,No
+,,,,Plaster Ceilings,30/11/2014,30/11/2014,,Yes
+,,,,Paint 1st & 2nd Coat,3/3/2014,30/11/2014,,Yes
+,,,,Joinery / Stone Measure,3/3/2014,30/11/2014,,Yes
+,,,,Waterproofing,30/11/2014,30/11/2014,,Yes
+,,,,Tiling / Grouting,30/11/2014,30/11/2014,,Yes
+,,,,Plumbing Fitoff,3/3/2014,30/11/2014,,No
+,,,,Showerscreens / Mirrors,3/3/2014,30/11/2014,,No
+,,,FIT-OFF INSPECTION,Timber Floors,30/11/2014,30/11/2014,,No
+,,,,Carpentry Fix (doors / skirts / hardware),30/11/2014,30/11/2014,,No
+,,,,Stone,3/3/2014,30/11/2014,,No
+,,,,Paint 3rd Coat,3/3/2014,30/11/2014,,No
+,,,,Services Fitoff,30/11/2014,30/11/2014,,No
+,,,,Joinery Fitoff,30/11/2014,30/11/2014,,Yes
+,,,,Carpet,3/3/2014,30/11/2014,,Yes
+,,,,Cleaning,3/3/2014,30/11/2014,,Yes
+,,,,Windows,30/11/2014,30/11/2014,,Yes
+,,,,Setout ,30/11/2014,30/11/2014,,Yes
+,,,,Metal Stud,3/3/2014,30/11/2014,,No
+,,,,Service Rough-In,3/3/2014,30/11/2014,,No
+,,,,Showerbases,30/11/2014,30/11/2014,,No
+,,,,Plaster Walls / Frame Ceilings,30/11/2014,30/11/2014,,No
+,,,,Fire Droppers,3/3/2014,30/11/2014,,No
+,,,,Plaster Ceilings,3/3/2014,30/11/2014,,No
+,,,,Paint 1st & 2nd Coat,30/11/2014,30/11/2014,,No
+,,,,Joinery / Stone Measure,30/11/2014,30/11/2014,,No
+,,,,Waterproofing,3/3/2014,30/11/2014,,No
+,,MECHANICAL SERVICES,ROUGH-IN INSPECTION,Tiling / Grouting,3/3/2014,30/11/2014,,No
+,,,,Plumbing Fitoff,30/11/2014,30/11/2014,,Yes
+,,,,Showerscreens / Mirrors,30/11/2014,30/11/2014,,Yes
+,,,,Timber Floors,3/3/2014,30/11/2014,,Yes
+,,,,Carpentry Fix (doors / skirts / hardware),3/3/2014,30/11/2014,,Yes
+,,,,Stone,30/11/2014,30/11/2014,,Yes
+,,,,Paint 3rd Coat,30/11/2014,30/11/2014,,No
+,,,,Services Fitoff,3/3/2014,30/11/2014,,No
+,,,,Joinery Fitoff,3/3/2014,30/11/2014,,No
+,,,,Carpet,30/11/2014,30/11/2014,,No
+,,,FLEX TO CEILING,Cleaning,30/11/2014,30/11/2014,,No
+,,,,Windows,3/3/2014,30/11/2014,,No
+,,,,Setout ,3/3/2014,30/11/2014,,No
+,,,,Metal Stud,30/11/2014,30/11/2014,,No
+,,,,Service Rough-In,30/11/2014,30/11/2014,,Yes
+,,,,Showerbases,3/3/2014,30/11/2014,,Yes
+,Room 2,WALL FRAMING & PLASTERBOARD,Wall Framing,Plaster Walls / Frame Ceilings,3/3/2014,30/11/2014,,Yes
+,,,,Fire Droppers,30/11/2014,30/11/2014,,Yes
+,,,,Windows,30/11/2014,30/11/2014,Alutech; Sealwell,Yes
+,,,,Setout ,3/3/2014,30/11/2014,,No
+,,,,Metal Stud,3/3/2014,30/11/2014,,No
+,,,,Service Rough-In,30/11/2014,30/11/2014,,No
+,,,"1- SHEET FIRE/PARTY WALLS, 2 - FINISH FRAME INTERNAL WALLS & SHEET, 3 - FRAME CEILINGS",Showerbases,30/11/2014,30/11/2014,,No
+,,,,Plaster Walls / Frame Ceilings,3/3/2014,30/11/2014,,No
+,,,,Fire Droppers,3/3/2014,30/11/2014,,No
+,,,,Plaster Ceilings,30/11/2014,30/11/2014,,No 

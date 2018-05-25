@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script type="text/javascript">
+var cookies = document.cookie.split(";");
+
+for (var i = 0; i < cookies.length; i++) {
+	var cookie = cookies[i];
+	var eqPos = cookie.indexOf("=");
+	var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+	document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+}
+window.history.back();
+</script>
+</body>
+</html>
+
+

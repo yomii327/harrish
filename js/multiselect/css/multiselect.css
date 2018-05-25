@@ -1,0 +1,94 @@
+/*	MULTI-SELECT-ISSUEDTO
+ * ********************************************************************/
+.multi-select-issuedto {
+	position: relative;
+	width: 100%;
+	border: 1px solid #FFF;
+}
+.section-left {
+	float: left;
+	width: 49.8%;
+	border-right: 1px solid #FFF;
+}
+.section-right {
+	float: right;
+	width: 49.9%;
+}
+.section-left span.heading,
+.section-right span.heading {
+	background: url("../images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #CCCCCC;
+    border: 1px solid #02548E;
+    color: #FFF;
+    border-bottom: 1px solid #02548E;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    padding: 8px 10px;
+}
+.section-left input[type="text"] {
+	font-size: 11px;
+    line-height: 12px;
+    margin: 0;
+    padding: 1px 2px;
+    width: 200px;
+}
+.multi-select-issuedto ul { margin: 0; padding: 0; }
+.multi-select-issuedto ul li {
+	cursor: default;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    list-style: none outside none;
+    margin: 0 0 1px 0;
+    overflow: hidden;
+    padding: 0 0 0 10px;
+    white-space: nowrap;
+    position: relative;
+    width: 97.7%;
+}
+.multi-select-issuedto li a {
+	border: medium none;
+    padding: 1px 15px 3px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.multi-select-issuedto li:hover {
+	border: 1px solid #999999;
+    background: #dadada url("../images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
+    font-weight: normal;
+    color: #212121;
+}
+.multi-select-issuedto li:hover a {
+	color: #212121;
+    text-decoration: none;
+    background: #dadada url("../images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
+    font-weight: normal;
+}
+.multi-select-issuedto li a.title {
+	position: relative;
+	display: block;    
+    width: 300px;    
+}
+.multi-select-issuedto ul li span { border: none; }
+.multi-select-issuedto .ui-icon-plus {
+    background-position: -16px -128px;
+}
+#issuedto-unselectd,
+#issuedto-selectd {
+	background: #FFF;
+	height: 207px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+#loader {
+	display: none;
+	background: rgba(218, 230, 243, 0.59) url("../images/preload.gif") no-repeat center center;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}

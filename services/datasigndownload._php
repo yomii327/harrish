@@ -1,0 +1,76 @@
+<?php
+//Header Secttion for include and objects 
+include_once("servicesQurey.php");
+$db = new QRY_Class();
+
+define("ZIPPASSWORD", '20W!seWork@r12');
+define("EXPORTFILEPATH", '../sync/Export');
+define("SIGNSOURCEPATH", '../inspections/sign');
+//Header Secttion for include and objects 
+
+if(isset($_REQUEST['data_sign'])){
+
+$userId = $db->queryFilter(trim(strip_tags(addslashes($_REQUEST['userId'])))); 
+$globalId = $db->queryFilter(trim(strip_tags(addslashes($_REQUEST['globalId']))));
+$authHash = $db->queryFilter(trim(strip_tags(addslashes($_REQUEST['authHash']))));
+$lastModifiedDate = $db->queryFilter(trim(strip_tags(addslashes($_REQUEST['lastModifiedDate']))));
+	/*if($db->hashAuth($globalId, $authHash)){
+	}else{
+		$output = array(
+			'status' => false,
+			'message' => 'User Authentication Fail',
+			'data' => ''
+		);
+		echo '['.json_encode($output).']';
+		die;
+	}*/
+//Remove Previous Files
+	$db->recursive_remove_directory(EXPORTFILEPATH.'/signoff');
+//Add New Files
+	@mkdir(EXPORTFILEPATH.'/signoff/', 0777);
+	
+	if(is_dir('../sync/Export/')){
+		if(empty($lastModifiedDate)){
+//Images
+			$folder = opendir(SIGNSOURCEPATH);
+			$pic_types = array("jpg", "jpeg", "gif", "png");
+			$index = array();
+			while ($file = readdir ($folder)) {
+				if(in_array(substr(strtolower($file), strrpos($file,".") + 1), $pic_types)){
+					#if(preg_match("/\bbg\b/i", $file)){
+						copy(SIGNSOURCEPATH.'/'.$file, EXPORTFILEPATH.'/signoff/'.$file);
+					#}
+				}
+			}
+			$zipSource = EXPORTFILEPATH.'/signoff/';
+			if($db->emptyDirectory($zipSource)){
+				#$zipFileName = $db->updateExportTable(EXPORTFILEPATH);
+				$db->compress($zipSource, 'signoff', EXPORTFILEPATH);
+//Code for Download the zip file
+				$filename = 'signoff.zip';
+				
+				header("Content-type: application/zip;\n");
+				header("Content-Transfer-Encoding: binary");
+				header("Content-Length: ".filesize(EXPORTFILEPATH.'/'.$filename)."\n");
+				header("Content-Disposition: attachment; filename=".$filename);
+				ob_end_flush();
+				@readfile(EXPORTFILEPATH.'/'.$filename);
+//Code for Download the zip file
+			}else{
+				$output = array(
+					'status' => false,
+					'message' => 'No One Sign Found',
+					'data' => ''
+				);
+				echo '['.json_encode($output).']';
+				die;
+			}
+			closedir($folder);			
+		}else{//Modified Date is comes
+		}
+	}else{
+		@mkdir('../sync/Export/',0777);
+		die;
+	}
+}
+?>

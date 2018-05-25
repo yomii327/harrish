@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+
+.msg {
+	text-align:left;
+	color:#FFFFFF;
+	background-repeat: no-repeat;
+	width:1000px;
+	margin:50px auto;
+	font-weight:bold;
+	font-size:16px;
+}
+
+.emsg {
+	text-align:left;
+	color:#CC0000;
+	background-repeat: no-repeat;
+	width:500px;
+	margin:50px auto;
+	font-weight:bold;
+	font-size:16px;
+}
+
+#apply_now_process{
+	z-index:100;
+	visibility:hidden;
+	position:absolute;
+	text-align:center;
+	width:1000px;
+	margin:40px auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#FFFFFF;
+}
+
+#apply_now_response {
+    float: left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 13px;
+	color:#FFFFFF;
+    font-weight: normal;
+    height: 1px;
+    margin: auto;
+    text-align: center;
+    width: 1000px;
+}
+
+#sign_in_process {
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    margin: 40px auto;
+    position: absolute;
+    text-align: center;
+    width: 460px;
+    z-index: 100;
+	visibility:hidden;
+}
+
+#sign_in_response {
+    float: left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 13px;
+	color:#FFFFFF;
+    font-weight: normal;
+    height: 1px;
+    margin: auto;
+    text-align: center;
+    width: 460px;
+}
+
+.sign_msg {
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 50px auto 50px 0;
+    text-align: left;
+    width: 500px;
+}
+
+.sign_emsg {
+    background-repeat: no-repeat;
+    color: #CC0000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 50px auto 50px 0px;
+    text-align: left;
+    width: 500px;
+}
+
+#edit_defect_process {
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    margin: -15px auto auto -250px;
+    position: absolute;
+    text-align: center;
+    width: 460px;
+    z-index: 100;
+	visibility:hidden;
+}
+
+#edit_defect_response {
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    height: 1px;
+    margin: auto;
+    text-align: left;
+    width: 460px;
+}
+
+.edit_defect_msg {
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 50px auto 50px -100px;
+    text-align: left;
+    width: 500px;
+}
+
+.edit_defect_emsg {
+    background-repeat: no-repeat;
+    color: #CC0000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 50px auto 50px -100px;
+    text-align: left;
+    width: 500px;
+}
+
+#create_response {
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    height: 1px;
+    margin: -30px auto auto;
+    text-align: center;
+    width: 980px;
+}
+
+#create_process {
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    margin: -45px auto;
+    position: absolute;
+    text-align: center;
+    width: 980px;
+    z-index: 100;
+	visibility:hidden;
+}
+
+#create_process_pdf {
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    margin: -45px auto;
+    position: absolute;
+    text-align: center;
+    width: 980px;
+    z-index: 100;
+	visibility:hidden;
+}
+
+#create_process_csv {
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    margin: -45px auto;
+    position: absolute;
+    text-align: center;
+    width: 980px;
+    z-index: 100;
+	visibility:hidden;
+}
+
+.create_msg {
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin: -30px auto 50px 75px;
+    text-align: left;
+    width: 980px;
+}
+
+.create_msg a {
+	color:#33FF99;
+	text-decoration:none;
+}
+
+.create_emsg {
+    background-repeat: no-repeat;
+    color: #CC0000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: -30px auto 50px 75px;
+    text-align: left;
+    width: 980px;
+}

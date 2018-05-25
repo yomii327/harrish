@@ -1,0 +1,27 @@
+.total_health{
+	border-left:1px solid #02548e;
+	border-top:1px solid #02548e;
+	border-right:2px solid #02548e;
+	border-bottom:2px solid #02548e;
+	margin-top:40px;
+	margin-bottom:45px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	padding:5px;
+	width:973px;
+}
+
+.dashboard_msj{
+	width:188px;
+	height:157px;
+	float:left;
+	background-repeat:no-repeat;
+}
+
+.statistics_msj{width:100px; float:right; margin:20px 20px auto; padding:5px; font-family:Arial; color:#f7b935; font-size:xx-large; text-align:center;}
+
+.about_msj{margin:80px auto; padding:10px; font-family:Arial; color:#FFFFFF; font-size:15px; font-weight:bold;}
+
+.about_top_5_msj{margin:78px auto; padding:9px; font-family:Arial; color:#FFFFFF; font-size:11px; width:395px;}
+
+.statistics_top_5_msj{width:100px; float:right; margin:40px 20px auto; padding:5px; font-family:Arial; color:#f7b935; font-size:13px; font-weight:bold;}

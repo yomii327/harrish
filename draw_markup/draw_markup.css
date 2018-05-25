@@ -1,0 +1,16 @@
+/* Markup document style sheet */
+.markup-container {
+	width: 100%;
+	margin: 10px 0px;
+}
+.page-title > h1 {
+	margin: 0 0 15px;	
+}
+.markup-section {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.wPaint-theme-standard {
+	width: 100% !important;
+	height: 500px !important;
+}

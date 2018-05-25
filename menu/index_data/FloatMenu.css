@@ -1,0 +1,22 @@
+/* Removes dotted border from active and focused links */
+.FloatMenuClass a:active, .FloatMenuClass a:focus{
+	outline: none;
+}
+
+/* Removes blue border from linked images in IE */
+.FloatMenuClass a img{
+	border: none;
+}
+
+/* Remove list style */
+.FloatMenuClass{
+	list-style: none;
+	list-style-image: none;
+}
+
+/* Show menu elements horizontally */
+.FloatMenuClass li{
+	display:inline;
+}
+/* ======== */
+
