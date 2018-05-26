@@ -55,12 +55,6 @@ if(!empty($selectedProId) && $selectedProId > 0){
 	}
 
 #}?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="style.css" type="text/css"/>
-<title>Report</title>
 <style type="text/css">
 @import "css/jquery.datepick.css";
 table td { padding: 5px; }
@@ -75,153 +69,155 @@ table.simpleTable td { color: #000000; }
 .roundCorner table tr td:nth-child(1) { text-align: right; }
 .roundCorner table tr td:nth-child(2) { text-align: center; }
 .roundCorner table tr td:nth-child(3) { text-align: left; }
+table tr td{ color:#000; }
 </style>
 <script language="javascript" type="text/javascript" src="js/ajax.js"></script>
 <script language="javascript" type="text/javascript" src="js/quality_checklist_task.js"></script>
-</head>
-<body id="dt_example">
-<br/>
-<div class="content_hd1" style="background-image:url(images/quality_checklist_big.png);">&nbsp;</div>
-<br clear="all" />
-<?php if(isset($_SESSION['inspection_added'])){ ?>
-<div id="errorHolder" style="margin-left: 40px;margin-bottom: 20px;">
-	<div class="success_r" style="height:35px;width:405px;">
-		<p>
-			<?=$_SESSION['inspection_added'];?>
-		</p>
-	</div>
-</div>
-<?php unset($_SESSION['inspection_added']); } ?>
-<div id="errorHolderDynm" style="margin-left: 40px;margin-bottom: 20px; display:none;">
-	<div class="success_r" style="height:35px;width:405px;">
-		<p id="errorHolderDynmPara"></p>
-	</div>
-</div>
-<div class="search_multiple" style="border:1px solid; text-align:center;width:960px;margin-left: 20px;">
-	<form name="qaSearchForm" id="qaSearchForm">		
-		<!-- qa_itp_task_search -->
-		<div id="qa_itp_task_search">
-			<table width="900" cellpadding="0" cellspacing="5" border="0">
-				<tr>
-					<td align="left" valign="top" nowrap="nowrap" style="">Project Name <span class="reqire">*</span></td>
-					<td colspan="2">
-						<select name="projName" id="projName" class="select_box" onChange="getAllTask(this.value);" style="width:220px;background-image:url(images/selectSpl.png);">
-							<option value="">Select</option>
-							<?php foreach($projNameArr as $projID=>$projName){
-								$selectBox = '<option value="'.$projID.'"';
+<main id="quality_check">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title">
+					<h2><span class="orange-text">Quality</span> Checklist</h2>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<?php if(isset($_SESSION['inspection_added'])){ ?>
+				<div id="errorHolder" style="margin-left: 40px;margin-bottom: 20px;">
+					<div class="success_r" style="height:35px;width:405px;">
+						<p>
+							<?=$_SESSION['inspection_added'];?>
+						</p>
+					</div>
+				</div>
+			<?php unset($_SESSION['inspection_added']); } ?>
+			<div id="errorHolderDynm" style="margin-left: 40px;margin-bottom: 20px; display:none;">
+				<div class="success_r" style="height:35px;width:405px;">
+					<p id="errorHolderDynmPara"></p>
+				</div>
+			</div>
+
+			<div class="search_multiple">
+				<form name="qaSearchForm" id="qaSearchForm">		
+				<!-- qa_itp_task_search -->
+				<div id="qa_itp_task_search">
+					<div class="row">
+						<div class="col-md-6">
+							<label for="projName"><h6>Project Name <span class="reqire">*</span></h6></label>
+							<select name="projName" id="projName" class="form-control" onChange="getAllTask(this.value);">
+								<option value="">Select</option>
+								<?php foreach($projNameArr as $projID=>$projName){
+									$selectBox = '<option value="'.$projID.'"';
 									if($projID == $selectedProId){
 										$selectBox .= 'selected="selected"';
 									}
 									$selectBox .= '>'.$projName.'</option>';
-								echo $selectBox;
-							}?> 
-						</select>
-						<div class="error-edit-profile" style="width:220px;display:none;" id="projectQAError">The project field is required</div>
-					</td>
-					<td align="left" valign="top" nowrap="nowrap" style="">Checklist <span class="reqire">*</span></td>
-					<td colspan="2">
-						<?php //$itpArr = array('Pre Pour' => 'Pre Pour ITP', 'Post Pour' => 'Post Pour ITP', 'Plastering' => 'Plastering ITP');?>
-						<select name="checklist" id="checklist"  class="select_box" onChange="addChecklistInSession(this.value);" style="width:220px;background-image:url(images/selectSpl.png);">
-							<option value="">Select</option>
-							<?php echo $optChecklist; ?>
-						</select>
-						<div class="error-edit-profile" style="width:220px;display:none;" id="checklistError">The Checklist field is required</div>
-					</td>
-				</tr>
-				<tr>
-					<td align="left" valign="top" nowrap="nowrap" style="">Location <span class="reqire">*</span></td>
-					<td colspan="2">
-						<div id="showLocation">
-						<select name="location" id="location" onchange="getSublocation(this.value);" class="select_box" style="width:220px;background-image:url(images/selectSpl.png);">
-							<option value="">Select</option>
-							<?php echo $optLocation; ?>
-						</select>
+									echo $selectBox;
+								}?>
+							</select>
+							<div class="error-edit-profile" style="display:none;" id="projectQAError">The project field is required</div>
 						</div>
-						<div class="error-edit-profile" style="width:220px;display:none;" id="locationQAError">The Location field is required</div>
-					</td>
-					<td align="left" valign="top" nowrap="nowrap" style="">Sub Location</td>
-					<td colspan="2">
-						<div id="showSubLocation">
-						<select name="subLocation" id="subLocation" onchange="getSublocation1(this.value)" class="select_box" style="width:220px;background-image:url(images/selectSpl.png);">
-							<option value="">Select</option>
-							<?php foreach($subLocationData as $subLocation) { ?>
-								<option value="<?=$subLocation['location_id']?>" <?php if($subLocation['location_id'] == $selectedSubLocationId){echo 'selected="selected"';} ?>><?=$subLocation['location_title']?></option>
-							<?php } ?>
-						</select>
+						<div class="col-md-6">
+							<label for="checklist"><h6>Checklist <span class="reqire">*</span></h6></label>
+							<?php //$itpArr = array('Pre Pour' => 'Pre Pour ITP', 'Post Pour' => 'Post Pour ITP', 'Plastering' => 'Plastering ITP');?>
+							<select name="checklist" id="checklist"  class="form-control" onChange="addChecklistInSession(this.value);">
+								<option value="">Select</option>
+								<?php echo $optChecklist; ?>
+							</select>
+							<div class="error-edit-profile" style="display:none;" id="checklistError">The Checklist field is required</div>
 						</div>
-						<div class="error-edit-profile" style="width:220px;display:none;" id="subLocationQA1Error">The Sub Location 1 field is required</div>
-					</td>
-				</tr>
-				<tr>
-					<td align="left" valign="top" nowrap="nowrap" style="">Sub Location 1</td>
-					<td colspan="2">
-						<div id="showSubLocation1">
-						<select name="sub_subLocation" id="sub_subLocation" onchange="getSublocation2(this.value)" class="select_box" style="width:220px;background-image:url(images/selectSpl.png);">
-							<option value="">Select</option>
-							<?php foreach($sub_subLocationData as $subSubLocation) { ?>
-								<option value="<?=$subSubLocation['location_id']?>" <?php if($subSubLocation['location_id'] == $selectedSubLocationId1){echo 'selected="selected"';} ?>><?=$subSubLocation['location_title']?></option>
-							<?php } ?>
-						</select>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label for="location"><h6>Location <span class="reqire">*</span></h6></label>
+							<div id="showLocation">
+								<select name="location" id="location" onchange="getSublocation(this.value);" class="form-control">
+									<option value="">Select</option>
+									<?php echo $optLocation; ?>
+								</select>
+							</div>
+							<div class="error-edit-profile" style="display:none;" id="locationQAError">The Location field is required</div>
 						</div>
-						<div class="error-edit-profile" style="width:220px;display:none;" id="subLocationQA2Error">The Sub Location 2 field is required</div>
-					</td>
-					<td align="left" valign="top" nowrap="nowrap" style="">Sub Location 2</td>
-					<td colspan="2">
-						<div id="showSubLocation2">
-						<select name="subSubLocation3" id="subSubLocation3" onchange="getSublocation3(this.value)" class="select_box" style="width:220px;background-image:url(images/selectSpl.png);">
-							<option value="">Select</option>
-							<?php foreach($subSubLocationData3 as $subSubLocation3) { ?>
-								<option value="<?=$subSubLocation3['location_id']?>" <?php if($subSubLocation3['location_id'] == $selectedSubLocationId2){echo 'selected="selected"';} ?>><?=$subSubLocation3['location_title']?></option>
-							<?php } ?>
-						</select>
+						<div class="col-md-6">
+							<label for="subLocation"><h6>Sub Location</h6></label>
+							<div id="showSubLocation">
+								<select name="subLocation" id="subLocation" onchange="getSublocation1(this.value)" class="form-control">
+									<option value="">Select</option>
+									<?php foreach($subLocationData as $subLocation) { ?>
+										<option value="<?=$subLocation['location_id']?>" <?php if($subLocation['location_id'] == $selectedSubLocationId){echo 'selected="selected"';} ?>><?=$subLocation['location_title']?></option>
+									<?php } ?>
+								</select>
+							</div>
+							<div class="error-edit-profile" style="display:none;" id="subLocationQA1Error">The Sub Location 1 field is required</div>
 						</div>
-					</td>
-				</tr>
-				<tr>
-					<td align="left" valign="top" nowrap="nowrap" style="">Status</td>
-					<td colspan="2">
-						<select name="status" id="status" class="select_box" style="width:220px;background-image:url(images/selectSpl.png);">
-							<option value="">Select</option>
-							<option value="Open" <?php if(isset($_SESSION['qa']['status'])){ if($_SESSION['qa']['status'] == 'Open'){ echo 'selected="selected"'; }}?> >Open</option>
-							<option value="Closed" <?php if(isset($_SESSION['qa']['status'])){ if($_SESSION['qa']['status'] == 'Closed'){ echo 'selected="selected"'; }}?> >Closed</option>
-							<!-- <option value="NA" < ?php if(isset($_SESSION['qa']['status'])){ if($_SESSION['qa']['status'] == 'NA'){ echo 'selected="selected"'; }}?> >NA</option> -->
-						</select>
-					</td>
-					<td align="left" valign="top" nowrap="nowrap" style="">Search Keyword</td>
-					<td colspan="2">
-						<div id="search_keyword">
-							<input type="text" name="searchKeyword" id="searchKeyword" class="input_small" style="width:220px;background-image:url(images/selectSpl.png);">
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label for="sub_subLocation"><h6>Sub Location 1</h6></label>
+							<div id="showSubLocation1">
+								<select name="sub_subLocation" id="sub_subLocation" onchange="getSublocation2(this.value)" class="form-control">
+									<option value="">Select</option>
+									<?php foreach($sub_subLocationData as $subSubLocation) { ?>
+										<option value="<?=$subSubLocation['location_id']?>" <?php if($subSubLocation['location_id'] == $selectedSubLocationId1){echo 'selected="selected"';} ?>><?=$subSubLocation['location_title']?></option>
+									<?php } ?>
+								</select>
+							</div>
+							<div class="error-edit-profile" style="display:none;" id="subLocationQA2Error">The Sub Location 2 field is required</div>
 						</div>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="3" align="left">&nbsp;</td>
-					<td align="left"><div id="report_timer" style=""></div></td>
-					<td><!--input type="hidden" value="create" name="sect" id="sect" /-->
-					<input type="hidden" name="sessionBack" id="sessionBack" value="Y" />
-					<!-- <input name="SearchInsp" type="button" class="submit_btn" id="button" value="" style="background-image:url(images/search_btn_web.png); width:113px; height:46px;" onClick="searchQualityChecklist();" /> -->
-					<input name="SearchInsp" type="button" class="green_small" id="button" value="Search"  onClick="searchQualityChecklist();" />
-					</td>
-				</tr>
-			</table>
+						<div class="col-md-6">
+							<label for="subSubLocation3"><h6>Sub Location 2</h6></label>
+							<div id="showSubLocation2">
+								<select name="subSubLocation3" id="subSubLocation3" onchange="getSublocation3(this.value)" class="form-control">
+									<option value="">Select</option>
+									<?php foreach($subSubLocationData3 as $subSubLocation3) { ?>
+										<option value="<?=$subSubLocation3['location_id']?>" <?php if($subSubLocation3['location_id'] == $selectedSubLocationId2){echo 'selected="selected"';} ?>><?=$subSubLocation3['location_title']?></option>
+								<?php } ?>
+							</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label for="status"><h6>Status</h6></label>
+							<select name="status" id="status" class="form-control">
+								<option value="">Select</option>
+								<option value="Open" <?php if(isset($_SESSION['qa']['status'])){ if($_SESSION['qa']['status'] == 'Open'){ echo 'selected="selected"'; }}?> >Open</option>
+								<option value="Closed" <?php if(isset($_SESSION['qa']['status'])){ if($_SESSION['qa']['status'] == 'Closed'){ echo 'selected="selected"'; }}?> >Closed</option>
+								<!-- <option value="NA" < ?php if(isset($_SESSION['qa']['status'])){ if($_SESSION['qa']['status'] == 'NA'){ echo 'selected="selected"'; }}?> >NA</option> -->
+							</select>
+						</div>
+						<div class="col-md-6">
+							<label for="searchKeyword"><h6>Search Keyword</h6></label>
+							<div id="search_keyword">
+								<input type="text" name="searchKeyword" id="searchKeyword" class="form-control"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div id="report_timer" style=""></div>
+							<!--input type="hidden" value="create" name="sect" id="sect" /-->
+							<input type="hidden" name="sessionBack" id="sessionBack" value="Y" />
+							<!-- <input name="SearchInsp" type="button" class="submit_btn" id="button" value="" style="background-image:url(images/search_btn_web.png); width:113px; height:46px;" onClick="searchQualityChecklist();" /> -->
+							<button name="SearchInsp" type="button" class="btn btn-default" id="button" onClick="searchQualityChecklist();"><i class="fas fa-search"></i> Search</button>
+						</div>
+					</div>
+				</div><!-- /.qa_itp_task_search -->
+				</form>
+				<div class="demo_jui" id="show_inspection" ></div>
+				<?php include'data-table.php';?>
+				<div id="container_progress">&nbsp;</div>
+				<div id="setSession"></div>
+				<div id="userRole"></div>
+			</div>
 		</div>
-		<!-- /.qa_itp_task_search -->
-	</form>
-</div>
-<div class="demo_jui" id="show_inspection" ></div>
-<?php include'data-table.php';?>
-
-<br/>
-<br/>
-<div id="container_progress" style="width:980px;margin-top:-20px;">&nbsp;</div>
-<div id="setSession"></div>
-<div id="userRole"></div>
-
-<style type="text/css">
-	table tr td{
-	 color:#000;
-	}
-</style>
+	</div>
+</main>
 
 <script type="text/javascript">
 	$(document).ready(function() {
