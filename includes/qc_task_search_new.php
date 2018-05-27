@@ -73,7 +73,7 @@ table tr td{ color:#000; }
 </style>
 <script language="javascript" type="text/javascript" src="js/ajax.js"></script>
 <script language="javascript" type="text/javascript" src="js/quality_checklist_task.js"></script>
-<main id="quality_check">
+<main id="quality-check">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

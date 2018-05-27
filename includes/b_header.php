@@ -70,7 +70,7 @@
 			<div id="nav" class="navbar-collapse collapse">
 				<ul class="navbar-nav">
 					<?php if(isset($_SESSION['web_message_board']) && $_SESSION['web_message_board'] == 1){ ?>
-						<li class="<?php if($s=='messages' || $s=='compose' || $s=='sent_box' || $s=='view_message' || $s=='message_details' || $s=='drafts' || $s=='trash' || $s=='address_book' || $s=='details_search'){echo 'active_link';}?>">
+						<li class="<?php if($s=='messages' || $s=='compose' || $s=='sent_box' || $s=='view_message' || $s=='message_details' || $s=='drafts' || $s=='trash' || $s=='address_book' || $s=='details_search'){echo 'active';}?>">
 							<a href="<?php echo (isset($_SESSION['idp']) && $_SESSION['idp'] > 0)?'?sect=messages':'#';?>" onclick="NoactiveProjects('messages')" >
 								<i class="fas fa-envelope"></i> Message Board
 							</a>

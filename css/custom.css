@@ -12,6 +12,11 @@ html {
   transition: .5s all ease-in-out!important;
 }
 
+.btn.btn-default a {
+  color: #fff!important;
+  text-decoration: none!important;
+}
+
 visible-mobile {
   display: none;
 }
@@ -239,16 +244,19 @@ header .logout button:hover,
 }
 /* Quality Check Page */
 main#quality-check { padding: 50px 0!important; }
-main#quality-check .content { padding: 35px 0; }
-main#quality-check label {
+main#quality-check .content { padding: 15px 0; }
+main#quality-check label h6 {
   font-family: "Ubuntu";
   font-weight: 400;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
 }
 main#quality-check .btn.btn-default {
-  margin-top: 15px!important;
+  margin-top: 20px!important;
   width: 180px!important;
+}
+main#quality-check .form-control {
+  margin-bottom: 10px;
 }
 
 /*health check*/
@@ -325,6 +333,12 @@ main#health-check .first_box table td {  border-color: transparent; }
   font-size: 15px;
 }
 
+#messages .MailRightHeader ul { 
+  padding-left: 0!important; 
+  margin-left: -5px!important;
+}
+
+#messages form#inbox { margin-top: 10px; }
 #messages .MailLeft li#draftLi > a:before {
   content: "\f2b6";
   font-family: Font Awesome\ 5 Free!important;

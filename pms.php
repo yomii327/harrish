@@ -34,8 +34,8 @@ $obj = new DB_Class(); ?>
 	<script type="text/javascript" src="js/jquery.ui.sortable.js"></script>
 	<script type="text/javascript" src="js/modal.popup.js"></script>
 	<script type="text/javascript" src="js/jquery.alerts.js"></script>
-  <link rel="stylesheet" href="css/vendors/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  	<link rel="stylesheet" href="css/vendors/bootstrap.min.css" type="text/css" />
+  	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<link rel="stylesheet" href="jquery.alerts.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<!--[if IE]><script language="javascript" type="text/javascript" src="../dist/excanvas.js"></script><![endif]-->
